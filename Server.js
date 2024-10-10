@@ -2,12 +2,13 @@ const express = require("express");
 
 const app = express();
 
+app.set("view engine","ejs")
 
 // @method GET
 // @route "http://localhost:5000/"
 
 app.get("/",function(req,res){
-    return res.send("<h1>Home</h1>");
+    return res.render("Home");
 });
 
 
@@ -15,49 +16,49 @@ app.get("/",function(req,res){
 // @route "http://localhost:5000/Product"
 
 app.get("/Product",function(req,res){
-    return res.send("<h1>Product</h1>");
+    return res.render("Product");
 });
 
 // @method GET
 // @route "http://localhost:5000/About"
 
 app.get("/About",function(req,res){
-    return res.send("<h1>About</h1>");
+    return res.render("Register");
 });
 
 // @method GET
 // @route "http://localhost:5000/Contact"
 
 app.get("/Contact",function(req,res){
-    return res.send("<h1>Contact</h1>");
+    return res.render("Contact");
 });
 
 // @method GET
 // @route "http://localhost:5000/User"
 
 app.get("/User",function(req,res){
-    return res.send("<h1>User</h1>");
+    return res.render("User");
 });
 
 // @method GET
 // @route "http://localhost:5000/Admin"
 
 app.get("/Admin",function(req,res){
-    return res.send("<h1>Admin</h1>");
+    return res.render("Admin");
 });
 
 // @method GET
 // @route "http://localhost:5000/Login"
 
 app.get("/Login",function(req,res){
-    return res.send("<h1>Login</h1>");
+    return res.render("Login");
 });
 
 // @method GET
 // @route "http://localhost:5000/Register"
 
 app.get("/Register",function(req,res){
-    return res.send("<h1>Register</h1>");
+    return res.render("Register");
 });
 
 
